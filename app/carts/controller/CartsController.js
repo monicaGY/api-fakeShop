@@ -1,6 +1,7 @@
 const Cart = require('../domain/Cart')
 const ValidatorCart = require('../../../validators/ValidatorCart')
-const { getProducts} = require('../../product/service/GetProducts')
+const { getProducts } = require('../../product/service/GetProducts')
+const validatorProduct = require('../../../validators/ValidatorProduct')
 const cartsController = {
 
   search: async function (req, res) {
@@ -10,15 +11,14 @@ const cartsController = {
         .select('-_id')
         .exec()
 
-
       if (result === null) {
-        return res.status(500).json({error: `Not found cart with id ${cartId}`})
+        return res.status(500).json({ error: `Not found cart with id ${cartId}` })
       }
 
       const products = await getProducts(result.cart.products)
       let cart = JSON.parse(JSON.stringify(result));
-      cart.cart.products = products     
-      
+      cart.cart.products = products
+
       res.status(200).json(cart)
     } catch (error) {
       res.status(500).json({ error: error.message });
@@ -36,11 +36,11 @@ const cartsController = {
         { 'cart.products': body },
         { new: false }
       ).select('-_id').exec()
-  
+
       if (!productsUpdate) {
-        return res.status(500).json({ error: `Not found cart with id  ${cartId}`})
+        return res.status(500).json({ error: `Not found cart with id  ${cartId}` })
       }
-      
+
       res.status(200).json(productsUpdate)
     } catch (error) {
       res.status(500).json({ error: error.message });
@@ -73,6 +73,54 @@ const cartsController = {
       }
 
       res.status(200).json(productUpdate)
+
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  },
+
+  deleteProduct: async function (req, res) {
+    const cartId = req.params.id
+    const productId = req.params.productId
+
+    try {
+      const result = await Cart.updateOne(
+        { 'cart.id': cartId },
+        { $pull: { 'cart.products': { productId: productId } } }
+      );
+
+      if (result.modifiedCount === 0) {
+        return res.status(404).json({ message: 'Product not found in cart or cart not found.' });
+      }
+
+      res.status(200).json({ message: `Product deleted successfully.` });
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  },
+
+  addProduct: async function (req, res) {
+    const cartId = req.params.id
+    const productId = req.params.productId
+
+    try {
+      await validatorProduct.exists(productId)
+      const cart = await Cart.findOne({ 'cart.id': cartId })
+
+      if (!cart) {
+        return res.status(404).json({ error: "Carrito no encontrado" });
+      }
+
+      const productSearch = cart.cart.products.find(p => p.productId == productId);
+
+      if (productSearch) {
+        productSearch.quantity += 1;
+      } else {
+        cart.cart.products.push({ productId: productId, quantity: 1 });
+      }
+      await cart.save();
+
+      res.status(200).json({ message: `Product add successfully.` });
 
     } catch (error) {
       res.status(500).json({ error: error.message });

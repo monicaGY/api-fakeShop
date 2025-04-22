@@ -10,5 +10,11 @@ router.put('/:id/products', (req, res) => {
 router.put('/:id/products/:productId', (req, res) => {
     cartsController.updateProduct(req, res)
 })
+router.delete('/:id/products/:productId', (req, res) => {
+    cartsController.deleteProduct(req, res)
+})
+router.post('/:id/products/:productId/add', (req, res) => {
+    cartsController.addProduct(req, res)
+})
 
 module.exports = router
