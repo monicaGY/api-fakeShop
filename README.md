@@ -30,7 +30,7 @@ cd api-fakeShop
 cp .env.example .env
 
 # Update the following variable in .env file
-MONGO_URL=mongodb://root:root2025@127.0.0.1:27017/fakeShop?authSource=admin
+MONGO_URL=mongodb://root:root2024@127.0.0.1:27017/fakeShop?authSource=admin
 ```
 
 ### 3. Build and Run Docker Container
