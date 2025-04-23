@@ -2,9 +2,6 @@ db = db.getSiblingDB('fakeShop');
 
 db.products.insertMany([
     {
-        "_id": {
-            "$oid": "67fe3d37b762269eb94a2236"
-        },
         "id": 1,
         "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
         "price": 109.95,
@@ -17,9 +14,6 @@ db.products.insertMany([
         }
     },
     {
-        "_id": {
-            "$oid": "67fe3d37b762269eb94a2237"
-        },
         "id": 2,
         "title": "Mens Casual Premium Slim Fit T-Shirts ",
         "price": 22.3,
@@ -32,9 +26,6 @@ db.products.insertMany([
         }
     },
     {
-        "_id": {
-            "$oid": "67fe3d37b762269eb94a2238"
-        },
         "id": 3,
         "title": "Mens Cotton Jacket",
         "price": 55.99,
@@ -47,9 +38,6 @@ db.products.insertMany([
         }
     },
     {
-        "_id": {
-            "$oid": "67fe3d37b762269eb94a2239"
-        },
         "id": 4,
         "title": "Mens Casual Slim Fit",
         "price": 15.99,
@@ -62,9 +50,6 @@ db.products.insertMany([
         }
     },
     {
-        "_id": {
-            "$oid": "67fe3d37b762269eb94a223a"
-        },
         "id": 5,
         "title": "John Hardy Women's Legends Naga Gold & Silver Dragon Station Chain Bracelet",
         "price": 695,
@@ -77,9 +62,6 @@ db.products.insertMany([
         }
     },
     {
-        "_id": {
-            "$oid": "67fe3d37b762269eb94a223b"
-        },
         "id": 6,
         "title": "Solid Gold Petite Micropave ",
         "price": 168,
@@ -92,9 +74,6 @@ db.products.insertMany([
         }
     },
     {
-        "_id": {
-            "$oid": "67fe3d37b762269eb94a223c"
-        },
         "id": 7,
         "title": "White Gold Plated Princess",
         "price": 9.99,
@@ -107,9 +86,6 @@ db.products.insertMany([
         }
     },
     {
-        "_id": {
-            "$oid": "67fe3d37b762269eb94a223d"
-        },
         "id": 8,
         "title": "Pierced Owl Rose Gold Plated Stainless Steel Double",
         "price": 10.99,
@@ -122,9 +98,6 @@ db.products.insertMany([
         }
     },
     {
-        "_id": {
-            "$oid": "67fe3d37b762269eb94a223e"
-        },
         "id": 9,
         "title": "WD 2TB Elements Portable External Hard Drive - USB 3.0 ",
         "price": 64,
@@ -137,9 +110,6 @@ db.products.insertMany([
         }
     },
     {
-        "_id": {
-            "$oid": "67fe3d37b762269eb94a223f"
-        },
         "id": 10,
         "title": "SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb/s",
         "price": 109,
@@ -152,9 +122,6 @@ db.products.insertMany([
         }
     },
     {
-        "_id": {
-            "$oid": "67fe3d37b762269eb94a2240"
-        },
         "id": 11,
         "title": "Silicon Power 256GB SSD 3D NAND A55 SLC Cache Performance Boost SATA III 2.5",
         "price": 109,
@@ -167,9 +134,6 @@ db.products.insertMany([
         }
     },
     {
-        "_id": {
-            "$oid": "67fe3d37b762269eb94a2241"
-        },
         "id": 12,
         "title": "WD 4TB Gaming Drive Works with Playstation 4 Portable External Hard Drive",
         "price": 114,
@@ -182,9 +146,6 @@ db.products.insertMany([
         }
     },
     {
-        "_id": {
-            "$oid": "67fe3d37b762269eb94a2242"
-        },
         "id": 13,
         "title": "Acer SB220Q bi 21.5 inches Full HD (1920 x 1080) IPS Ultra-Thin",
         "price": 599,
@@ -197,9 +158,6 @@ db.products.insertMany([
         }
     },
     {
-        "_id": {
-            "$oid": "67fe3d37b762269eb94a2243"
-        },
         "id": 14,
         "title": "Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultrawide Screen QLED ",
         "price": 999.99,
@@ -212,9 +170,6 @@ db.products.insertMany([
         }
     },
     {
-        "_id": {
-            "$oid": "67fe3d37b762269eb94a2244"
-        },
         "id": 15,
         "title": "BIYLACLESEN Women's 3-in-1 Snowboard Jacket Winter Coats",
         "price": 56.99,
@@ -227,9 +182,6 @@ db.products.insertMany([
         }
     },
     {
-        "_id": {
-            "$oid": "67fe3d37b762269eb94a2245"
-        },
         "id": 16,
         "title": "Lock and Love Women's Removable Hooded Faux Leather Moto Biker Jacket",
         "price": 29.95,
@@ -242,9 +194,6 @@ db.products.insertMany([
         }
     },
     {
-        "_id": {
-            "$oid": "67fe3d37b762269eb94a2246"
-        },
         "id": 17,
         "title": "Rain Jacket Women Windbreaker Striped Climbing Raincoats",
         "price": 39.99,
@@ -257,9 +206,6 @@ db.products.insertMany([
         }
     },
     {
-        "_id": {
-            "$oid": "67fe3d37b762269eb94a2247"
-        },
         "id": 18,
         "title": "MBJ Women's Solid Short Sleeve Boat Neck V ",
         "price": 9.85,
@@ -272,9 +218,6 @@ db.products.insertMany([
         }
     },
     {
-        "_id": {
-            "$oid": "67fe3d37b762269eb94a2248"
-        },
         "id": 19,
         "title": "Opna Women's Short Sleeve Moisture",
         "price": 7.95,
@@ -287,9 +230,6 @@ db.products.insertMany([
         }
     },
     {
-        "_id": {
-            "$oid": "67fe3d37b762269eb94a2249"
-        },
         "id": 20,
         "title": "DANVOUY Womens T Shirt Casual Cotton Short",
         "price": 12.99,
@@ -305,9 +245,6 @@ db.products.insertMany([
 
 db.carts.insertMany([
     {
-        "_id": {
-            "$oid": "67fe3f64b762269eb94a224f"
-        },
         "cart": {
             "id": 1,
             "userId": 7,
